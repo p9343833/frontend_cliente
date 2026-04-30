@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url('../../Resources/fonts/Proxima\ Nova\ Bold.otf') format('truetype');
+  }
+  
+  .body-stats {
+    background-color: #000000;
+    font-family: 'Proxima Nova Bold', sans-serif;
+    margin: 1;
+    overflow: scroll;
+    height: 100vh;
+  }
+  
+  .body-stats::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  .body-stats::-webkit-scrollbar-corner {
+    background: rgba(0,0,0,0);
+  }
+  
+  .body-stats::-webkit-scrollbar-thumb {
+    background-color: #F8B133;
+    border-radius: 6px;
+    border: 4px solid rgba(0,0,0,0);
+    background-clip: content-box;
+    min-width: 32px;
+    min-height: 32px;
+  }
+  
+  .body-stats::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0);
+  }
+  
+  .container-stats {
+    display: block;
+    height: 100%;
+  }
+  
+  .icon {
+    margin-top: 1%;
+    margin-left: 2%;
+    cursor: pointer;
+    width: 5%;
+  }
+
+  .nav-stats{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .div-title {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+  }
+  
+  .titulo {
+    font-weight: bolder;
+    color: #F8B133;
+    font-size: 3rem;
+  }
+  
+  .chart{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    width: 35%;
+    height: 35%;
+  }
+  
+  .chart-div{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .div-stats{
+    display: flex;
+    justify-content: space-around;
+    font-size: larger;
+  }
+  
+  .div-account{
+    display: flex;
+    justify-content: space-around;
+    font-size: larger;
+    margin-top: 2%;
+  }
+  
+  .back {
+    width: 50%;
+    padding: 10px 20px;
+    background-color: #F8B133;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .back:hover {
+    background-color: #ddaf60;
+  }
+  
+  .back{
+    width: 10%;
+    margin: 10px 0 10px 10px;
+    border-radius: 4px;
+  }
+
+  .search-input{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 2%;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid #F8B133;
+    background: transparent;
+    color: #ffffff;
+    outline: none;
+  }
+
+  .search-input:focus {
+    border: 2px solid #ffc25a;
+}
+
+.no-stats{
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}

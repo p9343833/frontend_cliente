@@ -1,0 +1,124 @@
+.configuration-container {
+    background-color: #000000;
+    height: 100vh;
+    padding: 20px;
+    color: #ffffff;
+    font-family: 'Proxima Nova Bold', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.configuration-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    height: auto;
+}
+
+
+
+.account-container {
+    background-color: #c7c7c721;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-field {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.input-field input {
+    width: calc(100% - 20px);
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid #F8B133;
+    background: transparent;
+    color: #ffffff;
+    outline: none;
+}
+
+.input-field input:focus {
+    border: 2px solid #ffc25a;
+}
+
+.input-field-value{
+    margin-top: 2%;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+}
+
+.input-bet, .input-min-bet{
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.input-field-value label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.input-field-value input {
+    width: calc(100% - 20px);
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid #F8B133;
+    background: transparent;
+    color: #ffffff;
+    outline: none;
+}
+
+.bet-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+
+}
+
+.bet-btn {
+    background-color: #F8B133;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.accounts-form{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.toggle-password {
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+

@@ -1,0 +1,13 @@
+.progress-spinner-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 100px; /* Controla el tamaño del área alrededor del spinner */
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

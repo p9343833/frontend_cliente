@@ -1,0 +1,123 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    user-select: none;
+    /* Evita la selección de contenido dentro del contenedor */
+    cursor: default;
+    /* Cambia el cursor para que no se muestre como seleccionable */
+}
+
+.login-image img {
+    max-width: 90%;
+    height: auto;
+    user-select: none;
+    /* Evita la selección de la imagen */
+    pointer-events: none;
+    /* Desactiva los eventos del puntero */
+    -webkit-user-drag: none;
+    /* Desactiva el arrastre de la imagen en WebKit */
+}
+
+.login-box {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
+form {
+    background-color: #000000;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 80%;
+}
+
+.form-group label {
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    color: white;
+    background-color: #000000;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-color: white;
+}
+
+.btn {
+    color: #000000;
+    font-weight: bold;
+    background-color: #E29700;
+    border: none;
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-top: 2%;
+}
+
+.btn:hover {
+    background-color: #ffc756;
+}
+
+.btn:active {
+    scale: 0.9;
+}
+
+.login-info {
+    color: white;
+    font-weight: bolder;
+    margin-bottom: 5%;
+}
+
+
+::placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+input.form-control::placeholder {
+    color: #555;
+    opacity: 1;
+}
+
+.password-forget {
+    color: #F8B133;
+    user-select: none;
+    font-size: 13px;
+}

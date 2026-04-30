@@ -1,0 +1,80 @@
+/* General body styling */
+.body-code {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+/* Container for the form elements */
+.container-code {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Styling for the email input */
+.input-email-code {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* General button styling */
+.generate-code {
+    width: 50%;
+    padding: 10px 20px;
+    background-color: #F8B133;
+    color: black;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+/* Hover effect for buttons */
+.generate-code:hover {
+    background-color: #ddaf60;
+}
+
+/* Styling for the back button */
+.back-login {
+    width: 10%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #F8B133;
+    color: #000000;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+    border-radius: 4px;
+    margin-top: 15px;
+    padding: 8px 20px;
+}
+
+/* Hover effect for back button */
+.back-login:hover {
+    background-color: #ddaf60;
+}
+
+/* Text styling for the code instructions */
+.text-code {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
