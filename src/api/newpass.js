@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://bot.juanbailon.xyz/';
+const BASE_URL = process.env.REACT_APP_API_URL; // Asegúrate de que esta variable esté definida en tu archivo .env
 
 export const handleGenerateCode = async (email) => {
     try {

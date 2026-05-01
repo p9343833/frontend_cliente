@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode';
 
-const BASE_URL = 'https://bot.juanbailon.xyz/';
+const BASE_URL = process.env.REACT_APP_API_URL; // Asegúrate de que esta variable esté definida en tu archivo .env
 
 // Función para iniciar sesión
 export const login = async (email, password) => {

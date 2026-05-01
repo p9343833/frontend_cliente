@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://bot.juanbailon.xyz/';
+const BASE_URL = process.env.REACT_APP_API_URL; // Asegúrate de que esta variable esté definida en tu archivo .env
 
 // Función para realizar la petición POST con una sola cuenta
 export const sendBetRequest = async (account) => {
