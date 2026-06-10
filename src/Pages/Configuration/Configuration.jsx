@@ -12,6 +12,28 @@ const Configuration = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [errorMessage, setErrorMessage] = useState('');
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+    const [selectedApiOption, setSelectedApiOption] = useState(''); // Nuevo estado
+
+
+    // Mapeo de opciones a variables de entorno
+    const apiOptions = {
+        'fabian_lv': {
+            label: 'Fabian (LV)',
+            envVar: process.env.REACT_APP_API_URL_LV_PN_FB
+        },
+        'sebastian_lv': {
+            label: 'Sebastian (LV)',
+            envVar: process.env.REACT_APP_API_URL_LV_AVG_ST
+        },
+        'fabian_all': {
+            label: 'Fabian All',
+            envVar: process.env.REACT_APP_API_URL_LV_PR_PN_FB
+        },
+        'sebastian_lv_fabian_pr': {
+            label: 'Sebastian (LV) + Fabian (PR)',
+            envVar: process.env.REACT_APP_API_URL_LV_AVG_ST_PR_PN_FB
+        }
+    };
 
     // Función para cargar los datos de suscripciones y bots activos
     const loadData = async () => {
@@ -47,9 +69,33 @@ const Configuration = () => {
 
     const handleBet = async (event) => {
         event.preventDefault();
+
+        // Validar que se haya seleccionado una opción
+        if (!selectedApiOption) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Selecciona una opción',
+                text: 'Debes elegir una de las configuraciones antes de apostar.',
+                confirmButtonText: 'OK'
+            });
+            return;
+        }
+
+        const baseUrl = apiOptions[selectedApiOption]?.envVar;
+
+        if (!baseUrl) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error de configuración URL FILTRO',
+                text: 'No se encontró la URL en la configuracion, para el filtro seleccionado.',
+                confirmButtonText: 'OK'
+            });
+            return;
+        }
+
         setIsLoading(true);
         try {
-            const response = await sendBetRequest(account);
+            const response = await sendBetRequest(account, baseUrl);
             if (response.status === 201) {
                 Swal.fire({
                     icon: 'success',
@@ -60,6 +106,7 @@ const Configuration = () => {
                     if (result.isConfirmed) {
                         loadData(); // Recarga los datos una vez confirmado el modal
                         setAccount({ accountNumber: '', password: '', value: '', minValue: '' }); // Limpia el formulario
+                        setSelectedApiOption('');
                     }
                 });
             }
@@ -98,6 +145,24 @@ const Configuration = () => {
                                 height="auto"
                             />
                         </div>
+
+                        {/* NUEVO SELECT configuracion de filtro */}
+                        <div className="input-field">
+                            <label htmlFor="apiOption">Configuración de apuesta:</label>
+                            <select
+                                id="apiOption"
+                                value={selectedApiOption}
+                                onChange={(e) => setSelectedApiOption(e.target.value)}
+                                required
+                            >
+                                <option value="" disabled>Selecciona una opción</option>
+                                {Object.entries(apiOptions).map(([key, { label }]) => (
+                                    <option key={key} value={key}>{label}</option>
+                                ))}
+                            </select>
+                        </div>
+
+
                         <div className="input-field">
                             <label htmlFor="accountNumber">Usuario (Casa de apuestas):</label>
                             <input

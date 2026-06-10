@@ -3,13 +3,15 @@ import axios from 'axios';
 const BASE_URL = process.env.REACT_APP_API_URL; // Asegúrate de que esta variable esté definida en tu archivo .env
 
 // Función para realizar la petición POST con una sola cuenta
-export const sendBetRequest = async (account) => {
+export const sendBetRequest = async (account, baseUrl = null) => {
     const bettingSite = 'betplay'; // Sitio de apuestas
     const accessToken = localStorage.getItem('accessToken'); // Obtener el token del localStorage
 
     if (!accessToken) {
         throw new Error('No se encontró el token de acceso en el localStorage');
     }
+
+    const apiUrl = baseUrl;
 
     const postData = {
         betting_site: bettingSite,
@@ -22,7 +24,7 @@ export const sendBetRequest = async (account) => {
 
     try {
         // Hacer la solicitud POST y devolver la respuesta del servidor
-        const response = await axios.post(`${BASE_URL}api/remote/bots/`, postData, {
+        const response = await axios.post(`${apiUrl}api/remote/bots/`, postData, {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${accessToken}`,

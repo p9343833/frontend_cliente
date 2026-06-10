@@ -122,3 +122,31 @@
 }
 
 
+/* Estilo para el select, similar a los inputs */
+.input-field select {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid #F8B133;
+    background: transparent;
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+    appearance: none; /* Quita el estilo nativo para personalizarlo */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23F8B133' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+/* Cuando el select está enfocado (opcional, mismo estilo que input) */
+.input-field select:focus {
+    border: 2px solid #ffc25a;
+}
+
+/* Opciones del desplegable (fondo oscuro para mantener coherencia) */
+.input-field select option {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
