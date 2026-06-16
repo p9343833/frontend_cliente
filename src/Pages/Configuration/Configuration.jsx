@@ -202,12 +202,12 @@ const Configuration = () => {
                         </div>
                         <div className="input-field-value">
                             <div className="input-bet"> 
-                                <label htmlFor="value">Valor de Apuesta (2.000 - 12.000):</label>
+                                <label htmlFor="value">Valor de Apuesta (500 - 12.000):</label>
                                 <input
                                     type="number"
                                     id="value"
-                                    placeholder="Valor de Apuesta (2.000 - 12.000)"
-                                    min="2000"
+                                    placeholder="Valor de Apuesta (500 - 12.000)"
+                                    min="500"
                                     max="12000"
                                     value={account.value}
                                     onChange={(e) => handleInputChange('value', e.target.value)}
